@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  />
+  <title>Main Component</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    .min-h-screen {
+      min-height: 100vh;
+    }
+
+    .bg-white {
+      background-color: white;
+    }
+
+    .shadow-lg {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .p-4 {
+      padding: 16px;
+    }
+
+    .rounded-lg {
+      border-radius: 8px;
+    }
+
+    .text-xl {
+      font-size: 1.25rem;
+    }
+
+    .fixed {
+      position: fixed;
+    }
+
+    .top-0 {
+      top: 0;
+    }
+
+    .z-50 {
+      z-index: 50;
+    }
+
+    .max-w-7xl {
+      max-width: 1200px;
+    }
+
+    .mx-auto {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .space-x-4 > *:not(:last-child) {
+      margin-right: 16px;
+    }
+
+    .rounded-full {
+      border-radius: 50%;
+    }
+
+    .text-[#333] {
+      color: #333;
+    }
+
+    .bg-[#f5f5f5] {
+      background-color: #f5f5f5;
+    }
+
+    .outline-none {
+      outline: none;
+    }
+
+    .hover\:text-[#666]:hover {
+      color: #666;
+    }
+
+    .max-h-[400px] {
+      max-height: 400px;
+    }
+
+    .overflow-y-auto {
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="min-h-screen bg-[#f5f5f5]">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg p-4 fixed w-full top-0 z-50">
+      <div class="flex items-center justify-between max-w-7xl mx-auto">
+        <div class="flex items-center space-x-4">
+          <button class="text-[#333] hover:text-[#666]">
+            <img
+              src="/profile-placeholder.jpg"
+              alt="User profile"
+              class="w-10 h-10 rounded-full"
+            />
+          </button>
+          <h1 class="text-xl font-semibold hidden md:block">
+            Welcome, John Doe
+          </h1>
+        </div>
+        <div class="flex-1 max-w-2xl mx-4">
+          <div class="flex items-center bg-[#f5f5f5] rounded-lg p-2">
+            <i class="fas fa-search text-[#666] mx-2"></i>
+            <input
+              type="text"
+              placeholder="Ask me anything..."
+              class="flex-1 bg-transparent outline-none"
+            />
+            <div class="flex space-x-2">
+              <button class="p-2 hover:bg-[#e0e0e0] rounded">
+                <i class="fas fa-camera"></i>
+              </button>
+              <button class="p-2 hover:bg-[#e0e0e0] rounded">
+                <i class="fas fa-microphone"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-20 px-4 md:px-8 max-w-7xl mx-auto">
+      <div class="my-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+          <button class="p-6 rounded-lg shadow-md flex flex-col items-center justify-center space-y-2 bg-[#007AFF] text-white">
+            <i class="fas fa-keyboard text-2xl"></i>
+            <span>Content Generation</span>
+          </button>
+          <button class="p-6 rounded-lg shadow-md flex flex-col items-center justify-center space-y-2 bg-white text-[#333]">
+            <i class="fas fa-image text-2xl"></i>
+            <span>Image Creation</span>
+          </button>
+          <button class="p-6 rounded-lg shadow-md flex flex-col items-center justify-center space-y-2 bg-white text-[#333]">
+            <i class="fas fa-code text-2xl"></i>
+            <span>Coding</span>
+          </button>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6 md:col-span-2">
+          <h2 class="text-xl font-semibold mb-4">Recent Activity</h2>
+          <div>
+            <div class="p-3 hover:bg-[#f5f5f5] rounded flex items-center justify-between">
+              <div class="flex items-center space-x-3">
+                <i class="fas fa-comment text-[#666]"></i>
+                <div>
+                  <h3 class="font-medium">Recent Chat 1</h3>
+                  <p class="text-sm text-[#666]">2 hours ago</p>
+                </div>
+              </div>
+              <button class="text-[#666] hover:text-[#333]">
+                <i class="fas fa-star"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
